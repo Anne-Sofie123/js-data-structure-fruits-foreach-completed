@@ -1,17 +1,21 @@
 "use strict";
 
+// Array med dine yndlingsfrugter
 let tableTwoFavorFruitList = ["Mango", "Dragonfruit", "Strawberry", "Blueberry"];
 
+// Find HTML-elementet med class .fruitList
+let fruitListContent = document.querySelector(".fruitList");
 
-tableTwoFavorFruitList.forEach( fruit => {
-    // console.log(`${fruit}`);
-    let content = "";
-    content += `
-            <li>${fruit}</li>
+// Opret en tom variabel til at bygge HTML-indholdet
+let content = "";
 
-    `;
-    document.querySelector(".fruitList").innerHTML += content;
+// Loop gennem arrayet og tilføj <li> for hver frugt
+tableTwoFavorFruitList.forEach(fruit => {
+    content += `<li>${fruit}</li>`;
 });
+
+// Indsæt hele listen i HTML
+fruitListContent.innerHTML = content;
 
 
 
